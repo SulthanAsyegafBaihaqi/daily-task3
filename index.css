@@ -1,0 +1,87 @@
+/* import url font google Lato di dalam css eksternal */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e7f6f2;
+}
+
+/* penggunaan spesificity pada selector css salah satu cara styling elemen tanpa menggunakan properti !important */
+p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.macam--heading {
+  margin-bottom: 80px;
+}
+
+.implementasi--link {
+  margin-bottom: 80px;
+}
+
+.paragraf--sapaan {
+  margin-bottom: 80px;
+}
+
+.paragraf--sapaan h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: #3f4e4f;
+}
+
+.paragraf--sapaan h3 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #570a57;
+}
+
+.paragraf--sapaan h4 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #950101;
+}
+
+.paragraf--sapaan p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ukuran--unit p {
+  font-weight: 700;
+}
+
+.sapa--pixel__maroon {
+  /* root default font-size yaitu 16px */
+  font-size: 16px;
+  color: #3d0000;
+}
+
+/* parent */
+/* parent div merupakan element yang membungkus p tag class sapa--em, dimana font-size diatur sesuai font-size root */
+/* sehingga penggunaan em unit di dalamnya mengikuti font-size sesuai dengan parent */
+div.ukuran--unit {
+  font-size: 1rem;
+}
+
+/* font-size em unit mengikuti font-size root paren element yaitu div dengan class ukuran--unit yaitu 1em == 1rem */
+.sapa--em__navi {
+  font-size: 1em;
+  color: #150e56;
+}
+
+/* value di dapat dari font-size root dibagi default font-size (16/16) */
+/* Atau ketika font-size root yaitu 20px hanya melakukan perhitungan font-size root dibagi default font-size (20/16) sehingga hasilnya 1.25rem*/
+.sapa--rem__green {
+  font-size: 1rem;
+}
